@@ -12,14 +12,11 @@ function getData() {
       is_student: true,
     },
   ];
-  return test.map(buildFullName(test));
+  return test.map(buildFullName);
 }
 
 function buildFullName(data) {
-  //dataに要素が入ってない？？
-  return (data) => {
-    return { ...data, full_name: data.family_name + ' ' + data.first_name };
-  };
+  return { ...data, full_name: data.family_name + ' ' + data.first_name };
 
   // Station14の問題はこちらです。想定する答えをここを書いてください。
   // 氏名がわかるようにしつつ、半角スペースで繋いでください。
